@@ -22,8 +22,8 @@ server.use(express.json());
 server.use(cors());
 
 // mongodb URI
-const URI =
-  "mongodb+srv://kobbyofori9:CplNwuDLRTbms5ig@cluster0.kassjvl.mongodb.net/";
+const URI = process.env.mongodbUri;
+  // "mongodb+srv://kobbyofori9:CplNwuDLRTbms5ig@cluster0.kassjvl.mongodb.net/";
 
 // connect mongodb
 mongoose
