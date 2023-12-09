@@ -9,8 +9,6 @@ exports.uploadProductImage = async (req, res) => {
       return res.status(400).json({ error: 'No file uploaded' });
     }
 
-    // You can process the uploaded image here, e.g., resize or validate it
-
     // Save the product to MongoDB with the image URL
     const product = new Product({
       name: req.body.name,

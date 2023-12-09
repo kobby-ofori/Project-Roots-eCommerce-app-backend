@@ -23,7 +23,6 @@ server.use(cors());
 
 // mongodb URI
 const URI = process.env.mongodbUri;
-  // "mongodb+srv://kobbyofori9:CplNwuDLRTbms5ig@cluster0.kassjvl.mongodb.net/";
 
 // connect mongodb
 mongoose
@@ -46,5 +45,3 @@ server.listen(8001, "0.0.0.0", () =>
   )
 );
 
-//CplNwuDLRTbms5ig
-//CplNwuDLRTbms5ig
