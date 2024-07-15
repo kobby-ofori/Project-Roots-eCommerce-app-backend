@@ -19,7 +19,9 @@ const server = express();
 server.use(express.json());
 
 // Use the CORS middleware
-server.use(cors());
+server.use(cors({
+  origin: ["http://localhost:3000", "https://roots-ecommerce-app.onrender.com"],
+}));
 
 // mongodb URI
 const URI = process.env.MONGO_URI;
@@ -39,9 +41,10 @@ server.use("/api", productRoutes);
 server.use("/api/user", userRoutes);
 
 // server listening
-server.listen(8001, "0.0.0.0", () =>
+const port = process.env.PORT || 8001 
+server.listen(port, () =>
   console.log(
-    "Hello, Elijah welcomes you and server is ready to accept request"
+    `Hello, Elijah's server is listening at port ${port} and it's ready to accept request`
   )
 );
 
