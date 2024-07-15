@@ -26,7 +26,7 @@ const URI = process.env.REACT_APP_MONGO_URI;
 
 // connect mongodb
 mongoose
-  .connect(URI, { useNewUrlParser: true, useUnifiedTopology: true })
+  .connect(URI)
   .then(() => {
     console.log(`MongoDB connected successfully`);
   })
