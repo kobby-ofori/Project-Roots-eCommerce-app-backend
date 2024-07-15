@@ -22,7 +22,7 @@ server.use(express.json());
 server.use(cors());
 
 // mongodb URI
-const URI = process.env.REACT_APP_MONGO_URI;
+const URI = process.env.MONGO_URI;
 
 // connect mongodb
 mongoose
