@@ -39,7 +39,7 @@ server.use("/api", productRoutes);
 server.use("/api/user", userRoutes);
 
 // server listening
-server.listen(8001, "0.0.0.0", () =>
+server.listen(8001, () =>
   console.log(
     "Hello, Elijah welcomes you and server is ready to accept request"
   )
