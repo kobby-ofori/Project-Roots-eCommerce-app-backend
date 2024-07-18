@@ -16,6 +16,7 @@ exports.uploadProductImage = async (req, res) => {
       description: req.body.description,
       price: req.body.price,
       image: req.file.buffer.toString('base64'), // Store the image data as base64
+      productEmail: req.body.productEmail,
     });
     await product.save();
 
